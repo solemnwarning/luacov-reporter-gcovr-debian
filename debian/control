@@ -1,0 +1,20 @@
+Source: lua-luacov-reporter-gcovr
+Section: interpreters
+Priority: optional
+Maintainer: Daniel Collins <solemnwarning@solemnwarning.net>
+Build-Depends: debhelper (>= 11), dh-lua
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://github.com/jprjr/luacov-reporter-gcovr
+Vcs-Git: https://github.com/solemnwarning/luacov-reporter-gcovr-debian.git
+Vcs-Browser: https://github.com/solemnwarning/luacov-reporter-gcovr-debian/
+
+Package: lua-luacov-reporter-gcovr
+Architecture: all
+Depends: ${misc:Depends},
+         lua5.2 | lua,
+         lua-dkjson,
+         lua-filesystem
+XB-Lua-Versions: ${lua:Versions}
+Provides: ${lua:Provides}
+Description: A luacov reporter that creates gcovr json files.

@@ -1,0 +1,5 @@
+lua-luacov-reporter-gcovr (0.0.2-0) unstable; urgency=medium
+
+  * Initial import.
+
+ -- Daniel Collins <solemnwarning@solemnwarning.net>  Sun, 30 Jan 2022 23:45:24 -0000
