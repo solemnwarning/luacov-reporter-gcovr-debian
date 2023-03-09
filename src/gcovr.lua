@@ -27,6 +27,7 @@ function gcovr:on_new_file(filename)
   self._gcovr_data.files[filename] = {
     file = filename,
     lines = {},
+    functions = {},
   }
 end
 
@@ -35,6 +36,7 @@ function gcovr:on_empty_line(filename, lineno)
     branches = {},
     count = 0,
     ['gcovr/noncode'] = true,
+    ['gcovr/excluded'] = false,
     line_number = lineno,
   })
 end
@@ -44,6 +46,7 @@ function gcovr:on_mis_line(filename, lineno, _)
     branches = {},
     count = 0,
     ['gcovr/noncode'] = false,
+    ['gcovr/excluded'] = false,
     line_number = lineno,
   })
 end
@@ -53,6 +56,7 @@ function gcovr:on_hit_line(filename, lineno, _, hits)
     branches = {},
     count = hits,
     ['gcovr/noncode'] = false,
+    ['gcovr/excluded'] = false,
     line_number = lineno,
   })
 end
