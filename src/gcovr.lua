@@ -19,7 +19,7 @@ gcovr.__index = gcovr
 function gcovr:on_start()
   self._gcovr_data = {
     files = {},
-    ['gcovr/format_version'] = '0.2',
+    ['gcovr/format_version'] = '0.3',
   }
 end
 
